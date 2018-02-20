@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="920.0" maxWidth="900.0" minHeight="920.0" minWidth="900.0" prefHeight="920.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg2dchess.GameController">
+   <center>
+      <GridPane fx:id="chessBoardpane" maxHeight="730.0" maxWidth="730.0" minHeight="730.0" minWidth="730.0" prefHeight="730.0" prefWidth="730.0" BorderPane.alignment="TOP_LEFT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="28.0" minWidth="28.0" prefWidth="28.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="28.0" minHeight="28.0" prefHeight="28.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints maxHeight="28.0" minHeight="28.0" prefHeight="28.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="733.0" fitWidth="736.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+               <image>
+                  <Image url="@../pictures/chessboard.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <GridPane fx:id="whiteCheckedFiguresPane" alignment="CENTER" maxHeight="84.0" maxWidth="900.0" minHeight="84.0" minWidth="900.0" prefHeight="84.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="playerBlackExit" mnemonicParsing="false" onAction="#handleButtonAction" text="Aufgeben" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </top>
+   <left>
+      <GridPane fx:id="whiteCheckedPawnsPane" alignment="CENTER" maxHeight="730.0" maxWidth="84.0" minHeight="730.0" minWidth="84.0" prefHeight="730.0" prefWidth="84.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="28.0" minHeight="28.0" prefHeight="28.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints maxHeight="28.0" minHeight="28.0" prefHeight="28.0" valignment="CENTER" vgrow="NEVER" />
+        </rowConstraints>
+      </GridPane>
+   </left>
+   <right>
+      <GridPane fx:id="blackCheckedPawnsPane" alignment="CENTER" maxHeight="730.0" maxWidth="84.0" minHeight="730.0" minWidth="84.0" prefHeight="730.0" prefWidth="84.0" BorderPane.alignment="CENTER">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="84.0" minWidth="84.0" prefWidth="84.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="29.0" minHeight="29.0" prefHeight="29.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="29.0" minHeight="29.0" prefHeight="29.0" vgrow="NEVER" />
+         </rowConstraints>
+      </GridPane>
+   </right>
+   <bottom>
+      <VBox maxHeight="104.0" maxWidth="900.0" minHeight="104.0" minWidth="900.0" prefHeight="104.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane fx:id="blackCheckedFiguresPane" alignment="CENTER" maxHeight="84.0" maxWidth="900.0" minHeight="84.0" minWidth="900.0" prefHeight="84.0" prefWidth="900.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="84.0" minHeight="84.0" prefHeight="84.0" valignment="CENTER" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="playerWhiteExit" mnemonicParsing="false" onAction="#handleButtonAction" text="Aufgeben" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+            <GridPane>
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="549.0" minWidth="10.0" prefWidth="536.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="181.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="183.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="gameErrorLabel">
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="statusLabel" prefHeight="17.0" prefWidth="110.0" GridPane.columnIndex="1" />
+                  <Label fx:id="drawLabel" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
